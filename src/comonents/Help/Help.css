@@ -1,0 +1,16 @@
+.main-help {
+    border: 2px solid white;
+    //height: 125px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.a-cl {
+    text-decoration: underline;
+}
+
+.a-cl:hover {
+    text-decoration: underline;
+    color: #812924;
+}

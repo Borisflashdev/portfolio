@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.mc {
+    color: #812924 !important;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #812924;
+}

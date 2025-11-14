@@ -1,0 +1,31 @@
+.portfolio-text {
+    font-family: monospace;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+@media (max-width: 1300px) and (min-width: 1179px) {
+    .portfolio-text {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 1180px) and (min-width: 1024px) {
+    .portfolio-text {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+    .portfolio-text {
+        font-size: 10px !important;
+    }
+}
+
+@media (max-width: 768px){
+    .portfolio-text {
+        font-size: 6px !important;
+    }
+}
