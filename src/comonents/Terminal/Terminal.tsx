@@ -4,7 +4,7 @@ import {type JSX, useEffect, useRef, useState} from "react";
 const fileSystem = {
     "~": {
         files: {
-            "about_me.txt": `I'm a <b>Junior Software Developer</b> with over <b>two years of experience</b>. I have a good eye for detail, <b>strong problem-solving skills</b>, and am a <b>team player</b>.<br/><br/>I have a strong desire to <b>learn as much as possible</b> and become a <b>better Developer</b>. I am particularly passionate about <b>Data Science</b> and <b>Machine Learning</b> technologies and eager to expand my knowledge in these fields.<br/><br/>I have a lot of experience in <b><span style="color: #61DAFB">React</span></b>, <b><span style="color: #A8B9CC">C</span></b> and <b><span style="color: #3776AB">Python</span></b>.<br/>`,
+            "about_me.txt": `I'm a <b>Junior Software Developer</b> with over <b>two years of experience</b>. I have a good eye for detail, <b>strong problem-solving skills</b>, and am a <b>team player</b>.<br/><br/>I have a strong desire to <b>learn as much as possible</b> and become a <b>better Developer</b>. I am particularly passionate about <b>Data Science</b> and <b>Machine Learning</b> technologies and eager to expand my knowledge in these fields.<br/><br/>I have a lot of experience in <span style="color: #61DAFB">React</span>, <span style="color: #A8B9CC">C</span> and <span style="color: #3776AB">Python</span>.<br/>`,
             "general_intrests.txt": `Outside of programming, I’m highly interested in <b>Philosophy</b>, <b>Aviation</b>, <b>History</b>, reading books, watching movies and anime, as well as board games and similar hobbies.<br/><br/>I’m especially drawn to <b>Philosophy</b> — I’ve read many books related to <b>Nihilism</b> and <b>Stoicism</b>, as both perspectives strongly influence how I think and approach personal growth.<br/><br/><b>Aviation</b> is my second big passion. I plan to earn a <b>pilot license</b> one day, even if just for sports flying, simply because I genuinely love being in the air.`,
             "languages.txt": `<b>Serbian:</b> Native</br><b>English:</b> Professional working proficiency <b>(CEFR C1)</b>`
         },
@@ -33,7 +33,7 @@ const fileSystem = {
     },
     "~/Skills": {
         files: {
-            "languages.txt": `<span style="color: #F7DF1E">JavaScript</span> <span style="color: #3178C6">TypeScript</span> <span style="color: #3776AB">Python</span> <span style="color: #A8B9CC">C</span>`,
+            "programming_languages.txt": `<span style="color: #F7DF1E">JavaScript</span> <span style="color: #3178C6">TypeScript</span> <span style="color: #3776AB">Python</span> <span style="color: #A8B9CC">C</span>`,
             "frontend.txt": `<span style="color: #61DAFB">React</span> <span style="color: #41B883">Vue</span>`,
             "backend.txt": `<span style="color: #339933">Node</span>`,
             "databases.txt": `<span style="color: #00758F">MySQL</span> <span style="color: #336791">PostgreSQL</span> <span style="color: #47A248">MongoDB</span>`,
