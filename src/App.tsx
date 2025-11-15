@@ -10,12 +10,12 @@ function App() {
   return (
     <>
       <div className="flex justify-center items-center h-screen">
-          <div className="main flex flex-col md:flex-row">
-              <div className="w-full md:w-1/4 md:min-w-[320px] md:mb-0 flex-shrink-0">
+          <div className="main main-container flex flex-col md:flex-row">
+              <div className="">
                   <AboutMe/>
               </div>
-              <div className="flex flex-col flex-1 w-full md:w-2/4">
-
+              <div className="flex flex-col flex-1 w-full md:w-2/4 pb-20">
+                  <Portfolio/>
                   <Terminal/>
                   <Help/>
               </div>

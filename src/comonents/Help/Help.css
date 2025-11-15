@@ -1,9 +1,13 @@
 .main-help {
     border: 2px solid white;
-    //height: 125px;
+    height: 122px;
     padding: 10px;
     font-size: 16px;
     font-family: monospace;
+    text-align: left;
+    overflow-y: auto;
+    word-break: break-word;
+    scrollbar-width: none;
 }
 
 .a-cl {
@@ -13,4 +17,10 @@
 .a-cl:hover {
     text-decoration: underline;
     color: #812924;
+}
+
+@media (max-width: 930px) {
+    .main-help {
+        height: 166px;
+    }
 }

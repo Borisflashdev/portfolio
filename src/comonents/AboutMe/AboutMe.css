@@ -3,4 +3,6 @@
     padding: 10px 12px 10px 12px;
     font-size: 18px;
     font-family: monospace;
+    width: 320px !important;
+    justify-self: center !important;
 }

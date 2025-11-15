@@ -1,5 +1,32 @@
 .main-terminal {
     border: 2px solid white;
     margin-bottom: 20px;
-    height: 300px;
+    height: 315px;
+    text-align: left;
+    font-family: monospace;
+    font-size: 16px;
+    padding: 10px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    word-break: break-word;
+    scrollbar-width: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: white;
+    width: 80%;
+}
+
+.dc {
+    font-weight: bold;
+    color: #5555FF;
+}
+
+.gc {
+    color: #55FF55;
 }
