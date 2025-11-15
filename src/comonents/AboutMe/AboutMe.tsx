@@ -7,7 +7,7 @@ const AboutMe = () => {
             <div className="main-div">
                 <div>
                     <p className="mc"><b>Boris Mirkovic</b></p>
-                    <p>Junior AI/ML Engineer</p>
+                    <p>Junior Software Developer</p>
                     <div className="flex justify-center">
                         <img src="/character.gif" alt="Boris Coding" className="w-50" onContextMenu={(e) => e.preventDefault()} draggable={false} />
                     </div>

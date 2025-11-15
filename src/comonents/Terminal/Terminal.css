@@ -12,14 +12,30 @@
     scrollbar-width: none;
 }
 
+.input-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.prompt {
+    flex-shrink: 0;
+}
+
 input {
     border: none;
     outline: none;
     padding: 0;
     margin: 0;
-    background-color: transparent;
     color: white;
-    width: 80%;
+    background-color: transparent;
+    height: 24px;
+    flex: 1;
+    min-width: 0;
+    font-family: monospace;
+    font-size: 16px;
+    caret-color: white;
 }
 
 .dc {
@@ -29,4 +45,8 @@ input {
 
 .gc {
     color: #55FF55;
+}
+
+.cw {
+    color: #e98510;
 }
