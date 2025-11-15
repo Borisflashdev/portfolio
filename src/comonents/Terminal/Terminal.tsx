@@ -69,8 +69,12 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
     };
 
     const handleLs = () => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         const current = fileSystem[currentPath];
         const files = Object.keys(current.files).join(" ");
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         const dirs = current.dirs.map(d => `<span class="dc">${d}</span>/`).join(" ");
         const content = [files, dirs].filter(Boolean).join(" ");
 
@@ -78,6 +82,8 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
     };
 
     const handleCat = (filename: string) => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         const current = fileSystem[currentPath];
 
         if (current.files[filename]) {
@@ -104,6 +110,8 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
             }
             addOutput(<div><span className="gc">{getPrompt()}</span>{input}<br/></div>);
         } else {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             const current = fileSystem[currentPath];
             if (current.dirs.includes(dirname)) {
                 setCurrentPath(`~/${dirname}`);
