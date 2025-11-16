@@ -9,7 +9,7 @@ const AboutMe = () => {
                     <p className="mc"><b>Boris Mirkovic</b></p>
                     <p>Junior Software Developer</p>
                     <div className="flex justify-center">
-                        <img src="/character.gif" alt="Boris Coding" className="w-50" onContextMenu={(e) => e.preventDefault()} draggable={false} />
+                        <img src="/character_blue.gif" alt="Boris Coding" className="w-50" onContextMenu={(e) => e.preventDefault()} draggable={false} />
                     </div>
                     <div className="flex items-center text-center">
                         <hr className="flex-1 border-t-2 border-dashed" />
