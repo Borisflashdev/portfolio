@@ -7,3 +7,16 @@
     margin-right: 150px;
     min-height: min-content;
 }
+
+@media (max-width: 767px) {
+    .container-div {
+        margin-top: 180px;
+    }
+}
+
+@media (max-height: 885px) {
+    .container-div {
+        margin-top: 300px;
+        margin-bottom: 300px;
+    }
+}

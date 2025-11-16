@@ -12,7 +12,7 @@ const AboutMe = () => {
                         <img src="/character.gif" alt="Boris Coding" className="w-50" onContextMenu={(e) => e.preventDefault()} draggable={false} />
                     </div>
                     <p>---------- Contact ----------</p>
-                    <div className="flex flex-col items-start" style={{fontSize: '16px'}}>
+                    <div className="flex flex-col items-start text-box">
                         <p>
                             &lt;<span className="mc">Location</span>&gt; <a href="https://maps.app.goo.gl/4wJ5JahntsGnpxWC7" className="link">Belgrade, Serbia</a>
                         </p>

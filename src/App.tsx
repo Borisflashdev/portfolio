@@ -17,7 +17,7 @@ function App() {
         if (siteAlive) {
             return (
                 <>
-                    <div className="flex justify-center items-center h-screen" onClick={() => inputRef.current?.focus()}>
+                    <div className="container-div flex justify-center items-center h-screen" onClick={() => inputRef.current?.focus()}>
                         <div className="main main-container flex flex-col md:flex-row">
                             <div className="">
                                 <AboutMe/>
