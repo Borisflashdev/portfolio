@@ -22,7 +22,7 @@ function App() {
                             <div className="">
                                 <AboutMe/>
                             </div>
-                            <div className="flex flex-col flex-1 w-full md:w-2/4 pb-20">
+                            <div className="flex flex-col flex-1 w-full md:w-2/4">
                                 <Portfolio/>
                                 <Terminal ref={inputRef} onTerminate={() => setSiteAlive(false)} />
                                 <Help/>
