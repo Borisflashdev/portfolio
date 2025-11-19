@@ -1,5 +1,3 @@
-import './App.css';
-
 import AboutMe from "./comonents/AboutMe/AboutMe.tsx";
 import Terminal from "./comonents/Terminal/Terminal.tsx";
 import Help from "./comonents/Help/Help.tsx";
@@ -17,8 +15,8 @@ function App() {
         if (siteAlive) {
             return (
                 <>
-                    <div className="container-div flex justify-center items-center" onClick={() => inputRef.current?.focus()}>
-                        <div className="main main-container flex flex-col md:flex-row">
+                    <div className="flex justify-center items-center" onClick={() => inputRef.current?.focus()}>
+                        <div className="flex flex-col md:flex-row text-center p-5 gap-5 ml-[150px] mr-[150px] min-h-[min-content] mt-[50px] max-[767px]:mt-0">
                             <div className="">
                                 <AboutMe/>
                             </div>
@@ -30,14 +28,10 @@ function App() {
                         </div>
                     </div>
                 </>
-            )
+            );
         } else {
-            return (
-                <>
-                    <div className="flex justify-center items-center h-screen"></div>
-                </>
-            )
+            return (<></>);
         }
 }
 
-export default App
+export default App;

@@ -1,8 +1,7 @@
-import './Portfolio.css'
 
 const Portfolio = () => {
     return (<>
-        <div className="portfolio-dev flex justify-center">
+        <div className="text-sm mb-5 flex justify-center max-[930px]:text-[9px] max-[410px]:text-[5px]">
            <pre>
                ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗ <br/>
                ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗<br/>
@@ -12,7 +11,7 @@ const Portfolio = () => {
                ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝ <br/>
            </pre>
         </div>
-    </>)
+    </>);
 }
 
 export default Portfolio;

@@ -1,4 +1,4 @@
-import './Terminal.css';
+import '../../index.css';
 import {type JSX, useEffect, useRef, useState} from "react";
 
 const fileSystem = {
@@ -12,22 +12,22 @@ const fileSystem = {
     },
     "~/Education": {
         files: {
-            "high_school.txt": `<b><span class="dc">Electrical Engineering High School "Nikola Tesla"</span></br><span class="cw">High School Diploma, Electrical and Electronics Engineering</span></br>2020 - 2024</b></br></br>In school, I didn’t have the opportunity to work much with programming languages, aside from <span style="color: #A8B9CC">C</span> and <span style="color: #5E5C5C">Assembly</span>. Most of my development skills come from learning on my own — spending a lot of time privately studying both <b>frontend</b> and <b>backend</b> technologies.`,
-            "university.txt": "<b><span class=\"dc\">Union University Faculty of Computing (RAF)</span></br><span class=\"cw\">Bachelor of Science - BS, Computer Science</span></br>2024 - Present</b></br></br>I enrolled in the <b>Natural Sciences and Mathematics program</b>, majoring in <b>Artificial Intelligence</b>, with a <b>scholarship</b> from two different companies. So far, I have completed courses in <b>Linear Algebra and Analytical Geometry</b>, <b>Calculus</b>, <b>Algorithms and Data Structures</b>, and an <b>Introduction to AI</b>.\n"
+            "high_school.txt": `<b><span class="font-bold text-[#5555FF]">Electrical Engineering High School "Nikola Tesla"</span></br><span class="text-[#ff8a00]">High School Diploma, Electrical and Electronics Engineering</span></br>2020 - 2024</b></br></br>In school, I didn’t have the opportunity to work much with programming languages, aside from <span style="color: #A8B9CC">C</span> and <span style="color: #5E5C5C">Assembly</span>. Most of my development skills come from learning on my own — spending a lot of time privately studying both <b>frontend</b> and <b>backend</b> technologies.`,
+            "university.txt": "<b><span class=\"font-bold text-[#5555FF]\">Union University Faculty of Computing (RAF)</span></br><span class=\"text-[#ff8a00]\">Bachelor of Science - BS, Computer Science</span></br>2024 - Present</b></br></br>I enrolled in the <b>Natural Sciences and Mathematics program</b>, majoring in <b>Artificial Intelligence</b>, with a <b>scholarship</b> from two different companies. So far, I have completed courses in <b>Linear Algebra and Analytical Geometry</b>, <b>Calculus</b>, <b>Algorithms and Data Structures</b>, and <b>Expert Systems</b>.\n"
         },
         dirs: []
     },
     "~/Experience": {
         files: {
-            "freelance.txt": `<b><span class="dc">Software Developer</span></br><span class="cw">Freelance</span></br>Nov 2022 - Present</b></br></br>Developed and delivered <b>diverse software and web solutions</b> for <b>international and regional clients</b>, including: <b>Web Administration Panel</b> for US-based Client, <b>Law Office Website</b>, <b>Admin Panel for Balkan Cultural Center</b>, <b>Custom Software & Management Systems</b>, and more.`,
-            "atlantic_grupa.txt": `<b><span class="dc">Software Engineer Intern</span></br><span class="cw">Atlantic Grupa</span></br>Mar 2025 – Apr 2025</b></br></br>Gained hands-on experience with <b>company workflows</b>, <b>service desk operations</b> and completed a course in <b>Data Processing and Analytics</b>.`,
-            "techtonnik.txt": `<b><span class="dc">Software Engineer Intern</span></br><span class="cw">Techtonnik</span></br>Jun 2023 – Oct 2023</b></br></br>Developed and designed <b>project-based Software, Websites, and Web Applications</b>. Attended weekly stand-up meetings to receive tasks and instructions for weekly goals.`
+            "freelance.txt": `<b><span class="font-bold text-[#5555FF]">Software Developer</span></br><span class="text-[#ff8a00]">Freelance</span></br>Nov 2022 - Present</b></br></br>Developed and delivered <b>diverse software and web solutions</b> for <b>international and regional clients</b>, including: <b>Web Administration Panel</b> for US-based Client, <b>Law Office Website</b>, <b>Admin Panel for Balkan Cultural Center</b>, <b>Custom Software & Management Systems</b>, and more.`,
+            "atlantic_grupa.txt": `<b><span class="font-bold text-[#5555FF]">Software Engineer Intern</span></br><span class="text-[#ff8a00]">Atlantic Grupa</span></br>Mar 2025 – Apr 2025</b></br></br>Gained hands-on experience with <b>company workflows</b>, <b>service desk operations</b> and completed a course in <b>Data Processing and Analytics</b>.`,
+            "techtonnik.txt": `<b><span class="font-bold text-[#5555FF]">Software Engineer Intern</span></br><span class="text-[#ff8a00]">Techtonnik</span></br>Jun 2023 – Oct 2023</b></br></br>Developed and designed <b>project-based Software, Websites, and Web Applications</b>. Attended weekly stand-up meetings to receive tasks and instructions for weekly goals.`
         },
         dirs: []
     },
     "~/Projects": {
         files: {
-            "this_site.txt": `<span class="dc">Portfolio Website</span></br><span class="cw">Personal Project</span></br>Nov 2025</b></br></br>I created this website to showcase my <b>experience and skills</b>. The project is available on GitHub. I built it using <span style="color: #61DAFB">React</span>, <span style="color: #3178C6">TypeScript</span>, and <span style="color: #06B6D4">Tailwind CSS</span>.`
+            "this_site.txt": `<span class="font-bold text-[#5555FF]">Portfolio Website</span></br><span class="text-[#ff8a00]">Personal Project</span></br>Nov 2025</b></br></br>I created this website to showcase my <b>experience and skills</b>. The project is available on GitHub. I built it using <span style="color: #61DAFB">React</span>, <span style="color: #3178C6">TypeScript</span>, and <span style="color: #06B6D4">Tailwind CSS</span>.`
         },
         dirs: []
     },
@@ -75,10 +75,10 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
         const files = Object.keys(current.files).join(" ");
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
-        const dirs = current.dirs.map(d => `<span class="dc">${d}</span>/`).join(" ");
+        const dirs = current.dirs.map(d => `<span class="font-bold text-[#5555FF]">${d}</span>/`).join(" ");
         const content = [files, dirs].filter(Boolean).join(" ");
 
-        addOutput(<div><span className="gc">{getPrompt()}</span>{input}<br/><span dangerouslySetInnerHTML={{__html: content}}/><br/></div>);
+        addOutput(<div><span className="text-[#39FF14]">{getPrompt()}</span>{input}<br/><span dangerouslySetInnerHTML={{__html: content}}/><br/></div>);
     };
 
     const handleCat = (filename: string) => {
@@ -89,15 +89,15 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
         if (current.files[filename]) {
             addOutput(
                 <div>
-                    <span className="gc">{getPrompt()}</span>{input}<br/>
+                    <span className="text-[#39FF14]">{getPrompt()}</span>{input}<br/>
                     <span dangerouslySetInnerHTML={{__html: current.files[filename]}}/>
                 </div>
             );
         } else {
             addOutput(
                 <div>
-                    <span className="gc">{getPrompt()}</span>{input}<br/>
-                    {input}: No such <span className="cw">file</span> or <span className="cw">directory</span>
+                    <span className="text-[#39FF14]">{getPrompt()}</span>{input}<br/>
+                    {input}: No such <span className="text-[#ff8a00]">file</span> or <span className="text-[#ff8a00]">directory</span>
                 </div>
             );
         }
@@ -108,19 +108,19 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
             if (currentPath !== "~") {
                 setCurrentPath("~");
             }
-            addOutput(<div><span className="gc">{getPrompt()}</span>{input}<br/></div>);
+            addOutput(<div><span className="text-[#39FF14]">{getPrompt()}</span>{input}<br/></div>);
         } else {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-expect-error
             const current = fileSystem[currentPath];
             if (current.dirs.includes(dirname)) {
                 setCurrentPath(`~/${dirname}`);
-                addOutput(<div><span className="gc">{getPrompt()}</span>{input}<br/></div>);
+                addOutput(<div><span className="text-[#39FF14]">{getPrompt()}</span>{input}<br/></div>);
             } else {
                 addOutput(
                     <div>
-                        <span className="gc">{getPrompt()}</span>{input}<br/>
-                        {input}: No such <span className="cw">file</span> or <span className="cw">directory</span>
+                        <span className="text-[#39FF14]">{getPrompt()}</span>{input}<br/>
+                        {input}: No such <span className="text-[#ff8a00]">file</span> or <span className="text-[#ff8a00]">directory</span>
                     </div>
                 );
             }
@@ -131,7 +131,7 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
         const text = input.trim().substring(input.trim().indexOf(" ") + 1);
         addOutput(
             <div>
-                <span className="gc">{getPrompt()}</span>{input}<br/>
+                <span className="text-[#39FF14]">{getPrompt()}</span>{input}<br/>
                 {text}
             </div>
         );
@@ -142,7 +142,7 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
         const prompt = getPrompt();
 
         if (trimmed === "") {
-            addOutput(<div><span className="gc">{prompt}</span><br/></div>);
+            addOutput(<div><span className="text-[#39FF14]">{prompt}</span><br/></div>);
             return;
         }
 
@@ -172,8 +172,8 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
                 } else {
                     addOutput(
                         <div>
-                            <span className="gc">{prompt}</span>{input}<br/>
-                            Permission denied: You are not allowed to run this <span className="cw">command</span>
+                            <span className="text-[#39FF14]">{prompt}</span>{input}<br/>
+                            Permission denied: You are not allowed to run this <span className="text-[#ff8a00]">command</span>
                         </div>
                     );
                 }
@@ -181,22 +181,20 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
             default:
                 addOutput(
                     <div>
-                        <span className="gc">{prompt}</span>{input}<br/>
-                        {trimmed}: <span className="cw">command</span> not found
+                        <span className="text-[#39FF14]">{prompt}</span>{input}<br/>
+                        {trimmed}: <span className="text-[#ff8a00]">command</span> not found
                     </div>
                 );
         }
     };
 
     return (
-        <div className="main-terminal" ref={main}>
-            <div className="terminal">
-                {output}
-            </div>
-            <div className="input-line">
-                <span className="gc prompt">{getPrompt()}</span>
+        <div className="border-2 border-white  mb-5 h-[324px] w-full text-left p-2.5 whitespace-pre-wrap overflow-y-auto no-scrollbar self-center max-[417px]:w-[350px] max-[405px]:w-[320px] max-[375px]:w-[260px] max-[400px]:text-xs" ref={main}>
+            {output}
+            <div className="flex flex-row items-center w-full">
+                <span className="text-[#39FF14] shrink-0">{getPrompt()}</span>
                 <input
-                    className="flex-1"
+                    className="border-none outline-none p-0 m-0 h-6 flex-1 min-w-0 caret-white max-[400px]:h-4"
                     type="text"
                     value={input}
                     ref={ref}

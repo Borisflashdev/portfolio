@@ -1,15 +1,8 @@
 @import "tailwindcss";
 
-body {
-    background-color: black;
-    color: white;
+.no-scrollbar {
+    scrollbar-width: none;
 }
-
-.mc {
-    color: #00E5FF !important;
-}
-
-.link:hover {
-    text-decoration: underline;
-    color: #00E5FF;
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
 }
