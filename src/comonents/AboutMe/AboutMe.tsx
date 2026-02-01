@@ -5,7 +5,7 @@ const AboutMe = () => {
             <div className="border-2 border-white py-2.5 px-3 text-lg w-[320px] justify-self-center max-[375px]:w-[260px]">
                 <div>
                     <p className="text-[#00E5FF]"><b>Boris Mirkovic</b></p>
-                    <p>Junior Software Developer</p>
+                    <p>AI/ML Engineer</p>
                     <div className="flex justify-center">
                         <img src="/character_blue.gif" alt="Boris Coding" className="w-50" onContextMenu={(e) => e.preventDefault()} draggable={false} />
                     </div>
