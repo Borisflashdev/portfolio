@@ -2,8 +2,8 @@ import portfolioImage from "../../../public/portfolio.png";
 
 const Portfolio = () => {
 
-    const handleContextMenu = (e) => {
-        e.preventDefault(); // blokira desni klik
+    const handleContextMenu = (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
     };
 
     return (<>
