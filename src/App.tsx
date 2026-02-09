@@ -1,7 +1,7 @@
-import AboutMe from "./comonents/AboutMe/AboutMe.tsx";
-import Terminal from "./comonents/Terminal/Terminal.tsx";
-import Help from "./comonents/Help/Help.tsx";
-import Portfolio from "./comonents/Portfolio/Portfolio.tsx";
+import AboutMe from "./components/AboutMe/AboutMe.tsx";
+import Terminal from "./components/Terminal/Terminal.tsx";
+import Help from "./components/Help/Help.tsx";
+import Portfolio from "./components/Portfolio/Portfolio.tsx";
 import {useEffect, useRef, useState} from "react";
 
 function App() {
