@@ -1,7 +1,14 @@
-import '../../index.css';
+import '../../../../portfolio/src/index.css';
 import {type JSX, useEffect, useRef, useState} from "react";
 
-const fileSystem = {
+interface Directory {
+    files: Record<string, string>;
+    dirs: string[];
+}
+
+type FileSystem = Record<string, Directory>;
+
+const fileSystem: FileSystem = {
     "~": {
         files: {
             "about_me.txt": `I'm a <b>Junior Software Developer</b> with over <b>two years of experience</b>. I have a good eye for detail, <b>strong problem-solving skills</b>, and am a <b>team player</b>.<br/><br/>I have a strong desire to <b>learn as much as possible</b> and become a <b>better Developer</b>. I am particularly passionate about <b>Data Science</b> and <b>Machine Learning</b> technologies and eager to expand my knowledge in these fields.<br/><br/>I have a lot of experience in <span style="color: #61DAFB">React</span>, <span style="color: #A8B9CC">C</span> and <span style="color: #3776AB">Python</span>.<br/>`,
@@ -53,9 +60,38 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
     const [input, setInput] = useState<string>("");
     const [output, setOutput] = useState<JSX.Element[]>([]);
     const [currentPath, setCurrentPath] = useState<string>("~");
+    const [history, setHistory] = useState<string[]>([]);
+    const [historyIndex, setHistoryIndex] = useState<number>(-1);
+    const [typingText, setTypingText] = useState<string>("");
+    const [isTyping, setIsTyping] = useState<boolean>(true);
     const main = useRef<HTMLDivElement | null>(null);
 
     const getPrompt = () => `guest@bm11.dev:${currentPath}${currentPath === "~" ? "" : currentPath === "~/Projects" ? " " : ""}$ `;
+
+    useEffect(() => {
+        const command = "cat welcome.txt";
+        let i = 0;
+        const interval = setInterval(() => {
+            i++;
+            setTypingText(command.slice(0, i));
+            if (i >= command.length) {
+                clearInterval(interval);
+                setTimeout(() => {
+                    setTypingText("");
+                    setIsTyping(false);
+                    setOutput([
+                        <div>
+                            <span className="text-[#39FF14]">{`guest@bm11.dev:~$ `}</span>cat welcome.txt<br/>
+                            Welcome to my portfolio!<br/>
+                            To start, type <span className="text-[#00E5FF]">ls</span> to see available files (or read the box below).
+                        </div>
+                    ]);
+                    requestAnimationFrame(() => ref.current?.focus());
+                }, 400);
+            }
+        }, 80);
+        return () => clearInterval(interval);
+    }, []);
 
     useEffect(() => {
         main.current?.scrollTo({
@@ -69,12 +105,8 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
     };
 
     const handleLs = () => {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
         const current = fileSystem[currentPath];
         const files = Object.keys(current.files).join(" ");
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
         const dirs = current.dirs.map(d => `<span class="font-bold text-[#5555FF]">${d}</span>/`).join(" ");
         const content = [files, dirs].filter(Boolean).join(" ");
 
@@ -82,8 +114,6 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
     };
 
     const handleCat = (filename: string) => {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
         const current = fileSystem[currentPath];
 
         if (current.files[filename]) {
@@ -97,7 +127,7 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
             addOutput(
                 <div>
                     <span className="text-[#39FF14]">{getPrompt()}</span>{input}<br/>
-                    {input}: No such <span className="text-[#ff8a00]">file</span> or <span className="text-[#ff8a00]">directory</span>
+                    cat: {filename}: No such <span className="text-[#ff8a00]">file</span>
                 </div>
             );
         }
@@ -110,8 +140,6 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
             }
             addOutput(<div><span className="text-[#39FF14]">{getPrompt()}</span>{input}<br/></div>);
         } else {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-expect-error
             const current = fileSystem[currentPath];
             if (current.dirs.includes(dirname)) {
                 setCurrentPath(`~/${dirname}`);
@@ -120,7 +148,7 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
                 addOutput(
                     <div>
                         <span className="text-[#39FF14]">{getPrompt()}</span>{input}<br/>
-                        {input}: No such <span className="text-[#ff8a00]">file</span> or <span className="text-[#ff8a00]">directory</span>
+                        cd: {dirname}: No such <span className="text-[#ff8a00]">directory</span>
                     </div>
                 );
             }
@@ -191,21 +219,50 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
     return (
         <div className="border-2 border-white rounded-sm mb-5 h-[324px] w-full text-left p-2.5 whitespace-pre-wrap overflow-y-auto no-scrollbar self-center max-[417px]:w-[350px] max-[405px]:w-[320px] max-[375px]:w-[260px] max-[400px]:text-xs" ref={main}>
             {output}
-            <div className="flex flex-row items-center w-full">
+            <div className="flex flex-row items-center w-full relative">
                 <span className="text-[#39FF14] shrink-0">{getPrompt()}</span>
-                <input
-                    className="border-none outline-none p-0 m-0 h-6 flex-1 min-w-0 caret-white max-[400px]:h-4"
-                    type="text"
-                    value={input}
-                    ref={ref}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyDown={e => {
-                        if (e.key === "Enter") {
-                            handleCommand();
-                            setInput("");
-                        }
-                    }}
-                />
+                {isTyping ? (
+                    <span>{typingText}<span className="animate-pulse">▌</span></span>
+                ) : (
+                <>
+                    <input
+                        className="terminal-input border-none outline-none p-0 m-0 h-6 w-0 min-w-0 absolute opacity-0 max-[400px]:h-4"
+                        type="text"
+                        value={input}
+                        ref={ref}
+                        onChange={(e) => setInput(e.target.value)}
+                        onKeyDown={e => {
+                            if (e.key === "Enter") {
+                                const trimmed = input.trim();
+                                if (trimmed !== "") {
+                                    setHistory(prev => [...prev, trimmed]);
+                                }
+                                setHistoryIndex(-1);
+                                handleCommand();
+                                setInput("");
+                            } else if (e.key === "ArrowUp") {
+                                e.preventDefault();
+                                if (history.length === 0) return;
+                                const newIndex = historyIndex === -1 ? history.length - 1 : Math.max(0, historyIndex - 1);
+                                setHistoryIndex(newIndex);
+                                setInput(history[newIndex]);
+                            } else if (e.key === "ArrowDown") {
+                                e.preventDefault();
+                                if (historyIndex === -1) return;
+                                if (historyIndex >= history.length - 1) {
+                                    setHistoryIndex(-1);
+                                    setInput("");
+                                } else {
+                                    const newIndex = historyIndex + 1;
+                                    setHistoryIndex(newIndex);
+                                    setInput(history[newIndex]);
+                                }
+                            }
+                        }}
+                    />
+                    <span>{input}</span><span className="terminal-cursor">▌</span>
+                </>
+                )}
             </div>
         </div>
     );
