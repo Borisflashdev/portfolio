@@ -189,7 +189,7 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
     };
 
     return (
-        <div className="border-2 border-white  mb-5 h-[324px] w-full text-left p-2.5 whitespace-pre-wrap overflow-y-auto no-scrollbar self-center max-[417px]:w-[350px] max-[405px]:w-[320px] max-[375px]:w-[260px] max-[400px]:text-xs" ref={main}>
+        <div className="border-2 border-white rounded-sm mb-5 h-[324px] w-full text-left p-2.5 whitespace-pre-wrap overflow-y-auto no-scrollbar self-center max-[417px]:w-[350px] max-[405px]:w-[320px] max-[375px]:w-[260px] max-[400px]:text-xs" ref={main}>
             {output}
             <div className="flex flex-row items-center w-full">
                 <span className="text-[#39FF14] shrink-0">{getPrompt()}</span>

@@ -2,7 +2,7 @@
 const AboutMe = () => {
     return (
         <>
-            <div className="border-2 border-white py-2.5 px-3 text-lg w-[320px] justify-self-center max-[375px]:w-[260px]">
+            <div className="border-2 border-white rounded-sm py-2.5 px-3 text-lg w-[320px] justify-self-center max-[375px]:w-[260px]">
                 <div>
                     <p className="text-[#00E5FF]"><b>Boris Mirkovic</b></p>
                     <p>Software Developer</p>
