@@ -1,7 +1,7 @@
-import AboutMe from "../../portfolio-ai-claude/src/components/AboutMe/AboutMe.tsx";
+import AboutMe from "./components/AboutMe/AboutMe.tsx";
 import Terminal from "./components/Terminal/Terminal.tsx";
-import Help from "../../portfolio-ai-claude/src/components/Help/Help.tsx";
-import Portfolio from "../../portfolio-ai-claude/src/components/Portfolio/Portfolio.tsx";
+import Help from "./components/Help/Help.tsx";
+import Portfolio from "./components/Portfolio/Portfolio.tsx";
 import {useEffect, useRef, useState} from "react";
 
 function App() {
