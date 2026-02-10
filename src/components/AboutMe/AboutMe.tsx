@@ -14,7 +14,7 @@ const AboutMe = () => {
                         <span className="px-4">Contact</span>
                         <hr className="flex-1 border-t-2 border-dashed " />
                     </div>
-                    <div className="flex flex-col items-start text-base max-[400px]:text-xs w-full overflow-hidden">
+                    <div className="flex flex-col items-start text-base w-full overflow-hidden">
                         <p className="flex w-full whitespace-nowrap overflow-hidden">
                             &lt;<span className="text-[#00E5FF] shrink-0">Location</span>&gt; <a
                             href="https://maps.app.goo.gl/4wJ5JahntsGnpxWC7" className="hover:text-[#00E5FF] hover:underline ml-1 truncate">Belgrade, Serbia</a>
