@@ -1,7 +1,7 @@
-import AboutMe from "./components/AboutMe/AboutMe.tsx";
+import AboutMe from "../../portfolio-ai-claude/src/components/AboutMe/AboutMe.tsx";
 import Terminal from "./components/Terminal/Terminal.tsx";
-import Help from "./components/Help/Help.tsx";
-import Portfolio from "./components/Portfolio/Portfolio.tsx";
+import Help from "../../portfolio-ai-claude/src/components/Help/Help.tsx";
+import Portfolio from "../../portfolio-ai-claude/src/components/Portfolio/Portfolio.tsx";
 import {useEffect, useRef, useState} from "react";
 
 function App() {
@@ -9,13 +9,13 @@ function App() {
     const inputRef = useRef<HTMLInputElement | null>(null);
 
     useEffect(() => {
-        inputRef.current?.focus();
+        inputRef.current?.focus({ preventScroll: true });
     });
 
         if (siteAlive) {
             return (
                 <>
-                    <div className="flex justify-center items-center" onClick={() => inputRef.current?.focus()}>
+                    <div className="flex justify-center items-center" onClick={() => inputRef.current?.focus({ preventScroll: true })}>
                         <div className="flex flex-col md:flex-row text-center p-5 gap-5 ml-[150px] mr-[150px] min-h-[min-content] mt-[50px] max-[767px]:mt-0">
                             <div className="">
                                 <AboutMe/>

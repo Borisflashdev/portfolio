@@ -1,4 +1,4 @@
-import '../../index.css';
+import '../../../../portfolio-ai-claude/src/index.css';
 import {type JSX, useEffect, useRef, useState} from "react";
 
 interface Directory {
@@ -86,7 +86,7 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
                             To start, type <span className="text-[#00E5FF]">ls</span> to see available files (or read the box below).
                         </div>
                     ]);
-                    requestAnimationFrame(() => ref.current?.focus());
+                    requestAnimationFrame(() => ref.current?.focus({ preventScroll: true }));
                 }, 400);
             }
         }, 80);
