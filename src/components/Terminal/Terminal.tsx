@@ -226,8 +226,12 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
                 ) : (
                 <>
                     <input
-                        className="terminal-input border-none outline-none p-0 m-0 h-6 w-0 min-w-0 absolute opacity-0 max-[400px]:h-4"
+                        className="terminal-input border-none outline-none bg-transparent text-transparent caret-transparent p-0 m-0 h-6 w-full absolute left-0 max-[400px]:h-4"
                         type="text"
+                        autoCapitalize="off"
+                        autoCorrect="off"
+                        autoComplete="off"
+                        spellCheck={false}
                         value={input}
                         ref={ref}
                         onChange={(e) => setInput(e.target.value)}
