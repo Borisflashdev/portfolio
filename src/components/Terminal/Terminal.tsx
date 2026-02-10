@@ -1,4 +1,4 @@
-import '../../../../portfolio/src/index.css';
+import '../../index.css';
 import {type JSX, useEffect, useRef, useState} from "react";
 
 interface Directory {
