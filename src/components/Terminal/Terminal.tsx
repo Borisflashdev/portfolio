@@ -11,41 +11,45 @@ type FileSystem = Record<string, Directory>;
 const fileSystem: FileSystem = {
     "~": {
         files: {
-            "about_me.txt": `I'm a <b>Junior Software Developer</b> with over <b>two years of experience</b>. I have a good eye for detail, <b>strong problem-solving skills</b>, and am a <b>team player</b>.<br/><br/>I have a strong desire to <b>learn as much as possible</b> and become a <b>better Developer</b>. I am particularly passionate about <b>Data Science</b> and <b>Machine Learning</b> technologies and eager to expand my knowledge in these fields.<br/><br/>I have a lot of experience in <span style="color: #61DAFB">React</span>, <span style="color: #A8B9CC">C</span> and <span style="color: #3776AB">Python</span>.<br/>`,
-            "general_intrests.txt": `Outside of programming, I’m highly interested in <b>Philosophy</b>, <b>Aviation</b>, <b>History</b>, reading books, watching movies and anime, as well as board games and similar hobbies.<br/><br/>I’m especially drawn to <b>Philosophy</b> — I’ve read many books related to <b>Nihilism</b> and <b>Stoicism</b>, as both perspectives strongly influence how I think and approach personal growth.<br/><br/><b>Aviation</b> is my second big passion. I plan to earn a <b>pilot license</b> one day, even if just for sports flying, simply because I genuinely love being in the air.`,
+            "about_me.txt": `I started coding in my <b>first year of high school</b> back in <b>2020</b> — and by my second year, I'd already landed my <b>first freelance gig</b> building an <b>admin panel</b> for a <b>US-based logistics company</b> in <span style="color: #41B883">Vue.js</span>. Since then, I've done <b>two internships</b>, shipped <b>full-stack apps to production</b>, and picked up freelance work along the way. I'm currently in my <b>second year of Computer Science</b> at <b>RAF Belgrade</b>.<br/><br/>Right now, I'm deep into <b>AI and machine learning</b> — and I mean all of it. <b>NLP</b>, <b>computer vision</b>, <b>reinforcement learning</b>, <b>generative AI</b> — if it has "AI" in the name, I'm interested. I'm building <b>C Learn</b>, a <b>zero-dependency machine learning framework</b> in pure <span style="color: #A8B9CC">C</span> from scratch, because I wanted to understand what's really happening <b>under the hood</b>. My goal is to <b>specialize and build a career in AI/ML</b>.<br/><br/>When I'm not studying or coding, I'm probably still reading about AI.`,
+            "hobbies.txt": `Outside of code, I'm big into <b>philosophy</b> — especially <b>Stoicism</b> and <b>Nietzsche</b>. Some of my favorites are <b>Marcus Aurelius' Meditations</b>, <b>Epictetus' Discourses</b>, <b>Seneca's On Providence</b>, and <b>Kafka's The Trial and Metamorphosis</b>, with <b>A.C. Grayling's History of Philosophy</b> being my all-time favorite. How I think about problems — both in code and in life — is heavily shaped by what I read.<br/><br/>My biggest passion outside of tech is <b>aviation</b>. I'm fascinated by <b>aircraft systems</b>, especially <b>Airbus</b>, and my life goal is to earn a <b>pilot license</b> one day, even if just for sport flying. I also have a deep interest in <b>Late Modern history</b> — everything from the <b>Napoleonic Wars</b> and <b>decolonization</b> to the <b>World Wars</b>.<br/><br/>On the tech side, I'm curious about <b>cybersecurity</b> and plan to explore it more seriously alongside my <b>AI/ML focus</b>.`,
             "languages.txt": `<b>Serbian:</b> Native</br><b>English:</b> Professional working proficiency <b>(CEFR C1)</b>`
         },
-        dirs: ["Education", "Experience", "Projects", "Skills"]
+        dirs: ["Education", "Experience", "Projects", "Skills", "Certifications"]
     },
     "~/Education": {
         files: {
-            "high_school.txt": `<b><span class="font-bold text-[#5555FF]">Electrical Engineering High School "Nikola Tesla"</span></br><span class="text-[#ff8a00]">High School Diploma, Electrical and Electronics Engineering</span></br>2020 - 2024</b></br></br>In school, I didn’t have the opportunity to work much with programming languages, aside from <span style="color: #A8B9CC">C</span> and <span style="color: #5E5C5C">Assembly</span>. Most of my development skills come from learning on my own — spending a lot of time privately studying both <b>frontend</b> and <b>backend</b> technologies.`,
-            "university.txt": "<b><span class=\"font-bold text-[#5555FF]\">Union University Faculty of Computing (RAF)</span></br><span class=\"text-[#ff8a00]\">Bachelor of Science - BS, Computer Science</span></br>2024 - Present</b></br></br>I enrolled in the <b>Natural Sciences and Mathematics program</b>, majoring in <b>Artificial Intelligence</b>, with a <b>scholarship</b> from two different companies. So far, I have completed courses in <b>Linear Algebra and Analytical Geometry</b>, <b>Calculus</b>, <b>Algorithms and Data Structures</b>, and <b>Expert Systems</b>.\n"
+            "high_school.txt": `<b><span class="font-bold text-[#5555FF]">Electrical Engineering High School "Nikola Tesla"</span></br><span class="text-[#ff8a00]">High School Diploma, Electrical and Electronics Engineering</span></br>2020 - 2024</b></br></br>My studies focused on <b>analog and digital electronics</b>, <b>telecommunications</b>, <b>microprocessors</b>, and <b>automation</b>. The only programming I touched in school was <span style="color: #A8B9CC">C</span> and <span style="color: #5E5C5C">Assembly</span>. Everything else — <b>frontend</b>, <b>backend</b>, <b>ML</b> — I taught myself outside of class.`,
+            "university.txt": `<b><span class="font-bold text-[#5555FF]">Union University Faculty of Computing (RAF)</span></br><span class="text-[#ff8a00]">Bachelor of Science - BS, Computer Science</span></br>2024 - Present</b></br></br>I'm studying <b>Computer Science</b> on the <b>Artificial Intelligence track</b>. So far, I've completed courses in <b>Linear Algebra</b>, <b>Discrete Mathematics</b>, <b>Calculus</b>, <b>Intro to Programming</b>, <b>OOP</b>, and <b>Computer Systems</b>. I'm currently in my second year covering <b>Algorithms and Data Structures</b>, <b>Software Design</b>, <b>Expert Systems</b>, and <b>Advanced Calculus</b> — with <b>Operating Systems</b>, <b>Computer Networks</b>, <b>Databases</b>, and <b>Algorithm Design & Analysis</b> coming up next semester.</br></br>Curious about the program? Run <span style="color: #00E5FF">open raf.link</span>`,
         },
         dirs: []
     },
     "~/Experience": {
         files: {
-            "freelance.txt": `<b><span class="font-bold text-[#5555FF]">Software Developer</span></br><span class="text-[#ff8a00]">Freelance</span></br>Nov 2022 - Present</b></br></br>Developed and delivered <b>diverse software and web solutions</b> for <b>international and regional clients</b>, including: <b>Web Administration Panel</b> for US-based Client, <b>Law Office Website</b>, <b>Admin Panel for Balkan Cultural Center</b>, <b>Custom Software & Management Systems</b>, and more.`,
-            "atlantic_grupa.txt": `<b><span class="font-bold text-[#5555FF]">Software Engineer Intern</span></br><span class="text-[#ff8a00]">Atlantic Grupa</span></br>Mar 2025 – Apr 2025</b></br></br>Gained hands-on experience with <b>company workflows</b>, <b>service desk operations</b> and completed a course in <b>Data Processing and Analytics</b>.`,
-            "techtonnik.txt": `<b><span class="font-bold text-[#5555FF]">Software Engineer Intern</span></br><span class="text-[#ff8a00]">Techtonnik</span></br>Jun 2023 – Oct 2023</b></br></br>Developed and designed <b>project-based Software, Websites, and Web Applications</b>. Attended weekly stand-up meetings to receive tasks and instructions for weekly goals.`
+            "atlantic_grupa.txt": `<b><span class="font-bold text-[#5555FF]">Software Engineer Intern</span></br><span class="text-[#ff8a00]">Atlantic Grupa</span></br>Mar 2025 – Apr 2025</b></br></br>Provided <b>IT support</b> including <b>OS reinstallation</b> and <b>workstation setup</b>, tracking everything through <span style="color: #0052CC">Jira</span>. Participated in <b>cross-departmental meetings</b> with <b>senior leadership</b> and learned <b>SAP business processes</b> and <b>end-to-end enterprise workflows</b>. Completed an internal <b>Data Processing and Analytics course</b> covering <span style="color: #4DABCF">NumPy</span> and <span style="color: #150458">Pandas</span>.</br></br>Visit their website: <span style="color: #00E5FF">open atlantic.link</span>`,
+            "techtonnik.txt": `<b><span class="font-bold text-[#5555FF]">Software Engineer Intern</span></br><span class="text-[#ff8a00]">Techtonnik</span></br>Jun 2023 – Oct 2023</b></br></br>Built an <b>internal administration panel</b> using <span style="color: #61DAFB">React</span>, <span style="color: #3178C6">TypeScript</span>, <span style="color: #339933">Node.js</span>, and <b>Express</b> with <span style="color: #336791">PostgreSQL</span> database schemas designed from scratch. Developed <b>full-stack web applications</b> deployed to production using <b>Docker</b>, working in <b>weekly sprints</b> with company-wide stand-ups.</br></br>Check out the company: <span style="color: #00E5FF">open techtonnik.link</span>`,
         },
         dirs: []
     },
     "~/Projects": {
         files: {
-            "this_site.txt": `<span class="font-bold text-[#5555FF]">Portfolio Website</span></br><span class="text-[#ff8a00]">Personal Project</span></br>Nov 2025</b></br></br>I created this website to showcase my <b>experience and skills</b>. The project is available on GitHub. I built it using <span style="color: #61DAFB">React</span>, <span style="color: #3178C6">TypeScript</span>, and <span style="color: #06B6D4">Tailwind CSS</span>.`
+            "c_learn.txt": `<span class="font-bold text-[#5555FF]">C Learn</span></br><span class="text-[#ff8a00]">Personal Project</span></br>2025 - Present</b></br></br>A <b>zero-dependency machine learning library</b> written in pure <span style="color: #A8B9CC">C</span>. Features <b>linear regression</b> (normal equation), <b>logistic regression</b> with sigmoid activation and probability prediction, and <b>SGD regression</b> — all supporting <b>L1</b>, <b>L2</b>, and <b>Elastic Net regularization</b>. Includes a custom <b>linear algebra engine</b> for matrix operations, transposition, inversion, slicing, and CSV parsing, along with a <b>feature scaling pipeline</b> (min-max, mean normalization, standardization) similar to <b>scikit-learn</b>. Currently expanding with <b>neural networks</b>, <b>decision trees</b>, and <b>clustering algorithms</b>.</br></br>Read the docs: <span style="color: #00E5FF">open c-learn.link</span>`,
         },
         dirs: []
     },
     "~/Skills": {
         files: {
-            "programming_languages.txt": `<span style="color: #F7DF1E">JavaScript</span> <span style="color: #3178C6">TypeScript</span> <span style="color: #3776AB">Python</span> <span style="color: #A8B9CC">C</span>`,
-            "frontend.txt": `<span style="color: #61DAFB">React</span> <span style="color: #41B883">Vue</span>`,
-            "backend.txt": `<span style="color: #339933">Node</span>`,
-            "databases.txt": `<span style="color: #00758F">MySQL</span> <span style="color: #336791">PostgreSQL</span> <span style="color: #47A248">MongoDB</span>`,
-            "data_science.txt": `<span style="color: #150458">Pandas</span> <span style="color: #4DABCF">NumPy</span>`,
-            "tools.txt": `<span style="color: #0052CC">Jira</span> <span style="color: #F05033">Git</span> <span style="color: #181717">GitHub</span>`,
+            "programming_languages.txt": `<span style="color: #A8B9CC">C</span> <span style="color: #3776AB">Python</span> <span style="color: #3178C6">TypeScript</span> <span style="color: #00758F">SQL</span>`,
+            "web.txt": `<span style="color: #61DAFB">React</span> <span style="color: #339933">Node.js</span> <b>Express</b>`,
+            "ml_dl.txt": `<span style="color: #FF6F00">TensorFlow</span> <span style="color: #EE4C2C">PyTorch</span> <b>scikit-learn</b> <span style="color: #4DABCF">NumPy</span> <span style="color: #150458">Pandas</span>`,
+            "tools.txt": `<b>Docker</b> <span style="color: #336791">PostgreSQL</span> <span style="color: #0052CC">Jira</span> <span style="color: #F05033">Git</span>`,
+        },
+        dirs: []
+    },
+    "~/Certifications": {
+        files: {
+            "english_c1.txt": `<b><span class="font-bold text-[#5555FF]">CEFR C1 English</span></br><span class="text-[#ff8a00]">British Council</span></br>Oct 2024</b>`,
+            "ml_specialization.txt": `<b><span class="font-bold text-[#5555FF]">Machine Learning Specialization</span></br><span class="text-[#ff8a00]">Andrew Ng, Coursera</span></br>2026</b>`
         },
         dirs: []
     }
@@ -202,6 +206,48 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
                         <div>
                             <span className="text-[#39FF14]">{prompt}</span>{input}<br/>
                             Permission denied: You are not allowed to run this <span className="text-[#ff8a00]">command</span>
+                        </div>
+                    );
+                }
+                break;
+            case "open":
+                if (currentPath === "~/Education" && arg === "raf.link") {
+                    window.open("https://raf.edu.rs/", "_blank");
+                    addOutput(
+                        <div>
+                            <span className="text-[#39FF14]">{prompt}</span>{input}<br/>
+                            Opening RAF website...
+                        </div>
+                    );
+                } else if (currentPath === "~/Experience" && arg === "atlantic.link") {
+                    window.open("https://www.atlanticgrupa.com/en/", "_blank");
+                    addOutput(
+                        <div>
+                            <span className="text-[#39FF14]">{prompt}</span>{input}<br/>
+                            Opening Atlantic Grupa website...
+                        </div>
+                    );
+                } else if (currentPath === "~/Experience" && arg === "techtonnik.link") {
+                    window.open("https://www.techtonnik.com/", "_blank");
+                    addOutput(
+                        <div>
+                            <span className="text-[#39FF14]">{prompt}</span>{input}<br/>
+                            Opening Techtonnik website...
+                        </div>
+                    );
+                } else if (currentPath === "~/Projects" && arg === "c-learn.link") {
+                    window.open("https://c-learn-docs.vercel.app/home", "_blank");
+                    addOutput(
+                        <div>
+                            <span className="text-[#39FF14]">{prompt}</span>{input}<br/>
+                            Opening C Learn documentation...
+                        </div>
+                    );
+                } else {
+                    addOutput(
+                        <div>
+                            <span className="text-[#39FF14]">{prompt}</span>{input}<br/>
+                            open: {arg}: No such <span className="text-[#ff8a00]">link</span>
                         </div>
                     );
                 }
