@@ -11,16 +11,16 @@ type FileSystem = Record<string, Directory>;
 const fileSystem: FileSystem = {
     "~": {
         files: {
-            "about_me.txt": `I started coding in my <b>first year of high school</b> back in <b>2020</b> — and by my second year, I'd already landed my <b>first freelance gig</b> building an <b>admin panel</b> for a <b>US-based logistics company</b> in <span style="color: #41B883">Vue.js</span>. Since then, I've done <b>two internships</b>, shipped <b>full-stack apps to production</b>, and picked up freelance work along the way. I'm currently in my <b>second year of Computer Science</b> at <b>RAF Belgrade</b>.<br/><br/>Right now, I'm deep into <b>AI and machine learning</b> — and I mean all of it. <b>NLP</b>, <b>computer vision</b>, <b>reinforcement learning</b>, <b>generative AI</b> — if it has "AI" in the name, I'm interested. I'm building <b>C Learn</b>, a <b>zero-dependency machine learning framework</b> in pure <span style="color: #A8B9CC">C</span> from scratch, because I wanted to understand what's really happening <b>under the hood</b>. My goal is to <b>specialize and build a career in AI/ML</b>.<br/><br/>When I'm not studying or coding, I'm probably still reading about AI.`,
+            "about_me.txt": `I started coding in my <b>first year of high school</b> back in <b>2020</b> — and by my second year, I'd already landed my <b>first freelance gig</b> building an <b>admin panel</b> for a <b>US-based logistics company</b> in <span style="color: #41B883">Vue.js</span>. Since then, I've done <b>two internships</b>, shipped <b>full-stack apps to production</b>, and picked up freelance work along the way. I'm currently in my <b>second year of Computer Science</b> at <b>RAF Belgrade</b>.<br/><br/>Right now, I'm deep into <b>AI and machine learning</b> — and I mean all of it. <b>NLP</b>, <b>computer vision</b>, <b>reinforcement learning</b>, <b>generative AI</b> — if it has "AI" in the name, I'm interested. My goal is to <b>specialize and build a career in AI/ML</b>.`,
             "hobbies.txt": `Outside of code, I'm big into <b>philosophy</b> — especially <b>Stoicism</b> and <b>Nietzsche</b>. Some of my favorites are <b>Marcus Aurelius' Meditations</b>, <b>Epictetus' Discourses</b>, <b>Seneca's On Providence</b>, and <b>Kafka's The Trial and Metamorphosis</b>, with <b>A.C. Grayling's History of Philosophy</b> being my all-time favorite. How I think about problems — both in code and in life — is heavily shaped by what I read.<br/><br/>My biggest passion outside of tech is <b>aviation</b>. I'm fascinated by <b>aircraft systems</b>, especially <b>Airbus</b>, and my life goal is to earn a <b>pilot license</b> one day, even if just for sport flying. I also have a deep interest in <b>Late Modern history</b> — everything from the <b>Napoleonic Wars</b> and <b>decolonization</b> to the <b>World Wars</b>.<br/><br/>On the tech side, I'm curious about <b>cybersecurity</b> and plan to explore it more seriously alongside my <b>AI/ML focus</b>.`,
             "languages.txt": `<b>Serbian:</b> Native</br><b>English:</b> Professional working proficiency <b>(CEFR C1)</b>`
         },
-        dirs: ["Education", "Experience", "Projects", "Skills", "Certifications"]
+        dirs: ["Education", "Experience", "Skills", "Certifications"]
     },
     "~/Education": {
         files: {
             "high_school.txt": `<b><span class="font-bold text-[#5555FF]">Electrical Engineering High School "Nikola Tesla"</span></br><span class="text-[#ff8a00]">High School Diploma, Electrical and Electronics Engineering</span></br>2020 - 2024</b></br></br>My studies focused on <b>analog and digital electronics</b>, <b>telecommunications</b>, <b>microprocessors</b>, and <b>automation</b>. The only programming I touched in school was <span style="color: #A8B9CC">C</span> and <span style="color: #5E5C5C">Assembly</span>. Everything else — <b>frontend</b>, <b>backend</b>, <b>ML</b> — I taught myself outside of class.`,
-            "university.txt": `<b><span class="font-bold text-[#5555FF]">Union University Faculty of Computing (RAF)</span></br><span class="text-[#ff8a00]">Bachelor of Science - BS, Computer Science</span></br>2024 - Present</b></br></br>I'm studying <b>Computer Science</b> on the <b>Artificial Intelligence track</b>. So far, I've completed courses in <b>Linear Algebra</b>, <b>Discrete Mathematics</b>, <b>Calculus</b>, <b>Intro to Programming</b>, <b>OOP</b>, and <b>Computer Systems</b>. I'm currently in my second year covering <b>Algorithms and Data Structures</b>, <b>Software Design</b>, <b>Expert Systems</b>, and <b>Advanced Calculus</b> — with <b>Operating Systems</b>, <b>Computer Networks</b>, <b>Databases</b>, and <b>Algorithm Design & Analysis</b> coming up next semester.</br></br>Curious about the program? Run <span style="color: #00E5FF">open raf.link</span>`,
+            "university.txt": `<b><span class="font-bold text-[#5555FF]">Union University Faculty of Computing (RAF)</span></br><span class="text-[#ff8a00]">Bachelor of Science - BS, Computer Science</span></br>2024 - Present</b></br></br>I'm studying <b>Computer Science</b> on the <b>Artificial Intelligence track</b>. So far, I've completed courses in <b>Linear Algebra and Analytic Geometry</b>, <b>Discrete Mathematics</b>, <b>Calculus</b>, <b>OOP</b>, and <b>Expert Systems</b>.</br></br>Curious about the program? Run <span style="color: #00E5FF">open raf.link</span>`,
         },
         dirs: []
     },
@@ -33,7 +33,7 @@ const fileSystem: FileSystem = {
     },
     "~/Projects": {
         files: {
-            "c_learn.txt": `<span class="font-bold text-[#5555FF]">C Learn</span></br><span class="text-[#ff8a00]">Personal Project</span></br>2025 - Present</b></br></br>A <b>zero-dependency machine learning library</b> written in pure <span style="color: #A8B9CC">C</span>. Features <b>linear regression</b> (normal equation), <b>logistic regression</b> with sigmoid activation and probability prediction, and <b>SGD regression</b> — all supporting <b>L1</b>, <b>L2</b>, and <b>Elastic Net regularization</b>. Includes a custom <b>linear algebra engine</b> for matrix operations, transposition, inversion, slicing, and CSV parsing, along with a <b>feature scaling pipeline</b> (min-max, mean normalization, standardization) similar to <b>scikit-learn</b>. Currently expanding with <b>neural networks</b>, <b>decision trees</b>, and <b>clustering algorithms</b>.</br></br>Read the docs: <span style="color: #00E5FF">open c-learn.link</span>`,
+           //"c_learn.txt": `<span class="font-bold text-[#5555FF]">C Learn</span></br><span class="text-[#ff8a00]">Personal Project</span></br>2025 - Present</b></br></br>A <b>zero-dependency machine learning library</b> written in pure <span style="color: #A8B9CC">C</span>. Features <b>linear regression</b> (normal equation), <b>logistic regression</b> with sigmoid activation and probability prediction, and <b>SGD regression</b> — all supporting <b>L1</b>, <b>L2</b>, and <b>Elastic Net regularization</b>. Includes a custom <b>linear algebra engine</b> for matrix operations, transposition, inversion, slicing, and CSV parsing, along with a <b>feature scaling pipeline</b> (min-max, mean normalization, standardization) similar to <b>scikit-learn</b>. Currently expanding with <b>neural networks</b>, <b>decision trees</b>, and <b>clustering algorithms</b>.</br></br>Read the docs: <span style="color: #00E5FF">open c-learn.link</span>`,
         },
         dirs: []
     },
@@ -41,7 +41,7 @@ const fileSystem: FileSystem = {
         files: {
             "programming_languages.txt": `<span style="color: #A8B9CC">C</span> <span style="color: #3776AB">Python</span> <span style="color: #3178C6">TypeScript</span> <span style="color: #00758F">SQL</span>`,
             "web.txt": `<span style="color: #61DAFB">React</span> <span style="color: #339933">Node.js</span> <b>Express</b>`,
-            "ml_dl.txt": `<span style="color: #FF6F00">TensorFlow</span> <span style="color: #EE4C2C">PyTorch</span> <b>scikit-learn</b> <span style="color: #4DABCF">NumPy</span> <span style="color: #150458">Pandas</span>`,
+            "ml_dl.txt": `<span style="color: #F89A36">scikit-learn</span> <span style="color: #4DABCF">NumPy</span> <span style="color: #150458">Pandas</span>`,
             "tools.txt": `<b>Docker</b> <span style="color: #336791">PostgreSQL</span> <span style="color: #0052CC">Jira</span> <span style="color: #F05033">Git</span>`,
         },
         dirs: []
@@ -49,7 +49,7 @@ const fileSystem: FileSystem = {
     "~/Certifications": {
         files: {
             "english_c1.txt": `<b><span class="font-bold text-[#5555FF]">CEFR C1 English</span></br><span class="text-[#ff8a00]">British Council</span></br>Oct 2024</b>`,
-            "ml_specialization.txt": `<b><span class="font-bold text-[#5555FF]">Machine Learning Specialization</span></br><span class="text-[#ff8a00]">Andrew Ng, Coursera</span></br>2026</b>`
+            //"ml_specialization.txt": `<b><span class="font-bold text-[#5555FF]">Machine Learning Specialization</span></br><span class="text-[#ff8a00]">Andrew Ng, Coursera</span></br>2026</b>`
         },
         dirs: []
     }
@@ -95,7 +95,7 @@ const Terminal: React.FC<TerminalProps> = ({ onTerminate, ref }) => {
             }
         }, 80);
         return () => clearInterval(interval);
-    }, []);
+    }, [ref]);
 
     useEffect(() => {
         main.current?.scrollTo({
